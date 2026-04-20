@@ -1,0 +1,12 @@
+Fredrick Farouk. Project.txt
+
+The goal of this project was to create an AI model that could take in any text and output a suitable emoji.
+I decided to take a somewhat novel approach: first, make a model that converts input to emotion, then, use a second model to convert emotion to emoji.
+
+The primary goal, however, was to use zero machine learning libraries, so that I could learn exactly how logistic regression actually works.
+I took a relatively simple model: logistic regression simple gradient descent.
+
+The first goal was to train a model to convert strings of text into emotion, and the first part of any language model is a vectorizer.
+After a little bit of research, I found that my (likely) best choice was TF-IDF vectorizer (Term Frequency-Inverse Document Frequency).
+
+In trying to implement it myself, and making the tokenizer that pairs it, I learnt my first piece of experimental information: 

@@ -1,0 +1,18 @@
+This explains the specification of each model.
+All models were trained with a learning rate of 1e-2 by the file emotion_ai_training.py.
+
+The model for admiration was trained over 2000 epochs.
+
+Its training stagnated with a training BCE loss of 0.1942, and a valuation BCE loss of 0.2368.
+
+The model for amusement was trained over 2000 epochs.
+
+Its training stagnated with a training BCE loss of 0.1155, and a valuation BCE loss of 0.15.
+
+The model for anger was trained over 2000 epochs.
+
+Its training stagnated with a training BCE loss of 0.1180, and a valuation BCE loss of 0.2573.
+
+The model for admiration was trained over 2000 epochs.
+Its training stagnated with a training BCE loss of 0.1942, and a valuation BCE loss of 0.2368.
+

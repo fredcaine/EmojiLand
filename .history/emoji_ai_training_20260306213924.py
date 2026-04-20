@@ -1,0 +1,54 @@
+# Fredrick Farouk. emoji_ai_training.py
+# All logic here is the same as emotion_ai_training.py, so commenting is minimal.
+
+import numpy as np
+from pandas import read_csv
+
+# Did not include a way to continue training, as the dataset is so small training is almost instant.
+current_epochs = 0
+def sigmoid(y):
+    return 1 / (1 + np.exp(-y))
+
+def bce(y_pred, y_true):
+    total = 0
+    for i in range(len(y_pred)):
+        total += y_true[i] * np.log(y_pred[i]) + (1 - y_true[i]) * np.log(1 - y_pred[i])
+    mean = -total / len(y_pred)
+    return mean
+
+lr_w = 0.01
+lr_b = 1e-5
+
+emojis = ["❤","😄","😐","😠","😢","😨","😮","🤔","🤢","🤩"]
+db = read_csv("emoji_ai_requirements/emoji_db.csv")
+# See preprocessing.py to see an explanation of how this was created.
+# This npz encodes the best fitting emojis and the 28 emotions associated with several documents.
+# There is only one array encoded in each of these, so I left its name as the default (arr_0)
+inputs = np.load("emoji_ai_requirements/db_emoji_input_vector.npz")["arr_0"]
+answer_sheet = np.load("emoji_ai_requirements/emoji_lookup.npz")["arr_0"]
+
+epochs = 1000001
+
+for emoji in emojis:
+    weights = np.zeros(shape=(28,1))
+    bias = 0
+    y_true = np.array(answer_sheet[:, emojis.index(emoji)]).reshape(-1, 1)  # [:,x] slices to extract column x (0-indexed, as is .index)
+    # made an array (doccount,1) via .reshape() to make multiplication easier later
+    pos_weight = (294/2) / sum(y_true)  # strength of preference
+    sample_weights = np.where(y_true == 1, pos_weight, 1.0)
+    for epoch in range(epochs):
+
+        logits = inputs @ weights + bias  # make a prediction and squash it down to {0,1}
+        y_pred = sigmoid(logits)  # this actually runs because numpy arrays work element wise with arithmetic operators
+        # y_true is made an array (doccount,1) such that it matches y_pred, which is an array and therefore (doccount,1)
+        errors = (y_pred - y_true) * sample_weights  # rewards confident answers linearly. this is the partial derivative of the BCE loss function
+        grad_w = inputs.T.dot(errors) / len(y_pred) # negative for a guess that's too low, positive for a guess that's too high
+        grad_b = np.mean(errors)
+        weights -= grad_w * lr_w  # negate it to adjust properly for the sign
+        bias -= grad_b * lr_b
+
+        if epoch % 50000 == 0:
+            print(f"training {emoji}. epoch {epoch}. bce loss: {bce(y_pred, y_true)}")
+            print(f"""gradient of bias {grad_b * lr_b}. newest bias: {bias}
+mean gradient of weights {np.mean(grad_w) * lr_w}. most recent mean of weights: {np.mean(weights)}""")
+    np.savez(f"emoji_model_weights_posweighted/db_BCE_emoji_model_weights.npz", weights=weights, bias=bias, epochs=(current_epochs + epochs))

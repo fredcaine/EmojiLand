@@ -1,0 +1,7 @@
+This folder contains all of the model weights for the conversions of 28 long vectors (taken from different places) into
+values for emoji, allowing emoji prediction.
+
+Directories with 'ai' in their name mean the input vectors were taken from the emotion AI.
+Directories with 'db' in their name mean the input vectors were taken from the original go_emotions_dataset.csv.
+Directories with 'BCE' mean they were trained with Binary Cross-Entropy loss.
+Directories with 'CCE' mean they were trained with Categorical Cross-Entropy loss.

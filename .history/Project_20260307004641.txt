@@ -1,8 +1,0 @@
-Fredrick Farouk. Project.txt
-
-The goal of this project was to create an AI model that could take in any text and output a suitable emoji.
-I decided to take a somewhat novel approach: first, make a model that converts input to emotion, then, use a second model to convert emotion to emoji.
-
-The primary goal, however, was to use zero machine learning libraries, so that I could learn exactly how machine learning usually works under the hood.
-
-I took a relatively simple model: logistic regression simple gradient descent, and learned how to train it with only

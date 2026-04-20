@@ -1,5 +1,6 @@
 Fredrick Farouk. Project.txt
 Below is a report on the journey of making this project.
+I worked on this during the summer of 2025.
 
 The goal of this project was to create an AI model that could take in any text and output a suitable emoji. That's why I called it EmojiLand.
 I decided to take a somewhat novel approach: first, make a model that converts input to emotion, then, use a second model to convert emotion to emoji.

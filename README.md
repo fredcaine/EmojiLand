@@ -63,4 +63,4 @@ In general, there are more false-positives than false-negatives, which is someth
 
 Finally, I put together the two parts in emoji_predictor.py, evaluating and running tests on the model.
 
-Thank you for reading my synopsis. This was an amazing project to work on and add.
+Thank you for reading my synopsis. This was an amazing project to work on.

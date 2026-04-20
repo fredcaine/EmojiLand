@@ -1,4 +1,4 @@
-Fredrick Farouk. Project.txt
+Fredrick Farouk. README.md
 Below is a report on the journey of making this project.
 I worked on this during the summer of 2025.
 

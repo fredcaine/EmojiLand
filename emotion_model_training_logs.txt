@@ -1,0 +1,90 @@
+This explains the specification of each model.
+All models were trained with a learning rate of 1e-2 by the file emotion_ai_training.py.
+
+The model for admiration was trained over 88000 epochs.
+Its training stagnated with a training BCE loss of 0.2163, and a valuation BCE loss of 0.2285.
+
+The model for amusement was trained over 79000 epochs.
+Its training stagnated with a training BCE loss of 0.1319, and a valuation BCE loss of 0.1405.
+
+The model for anger was trained over 51000 epochs.
+Its training stagnated with a training BCE loss of 0.1505, and a valuation BCE loss of 0.2198.
+
+The model for annoyance was trained over 42000 epochs.
+Its training stagnated with a training BCE loss of 0.2208, and a valuation BCE loss of 0.2545.
+
+The model for approval was trained over 60000 epochs.
+Its training stagnated with a training BCE loss of 0.2754, and a valuation BCE loss of 0.2942.
+
+The model for caring was trained over 76000 epochs.
+Its training stagnated with a training BCE loss of 0.1123, and a valuation BCE loss of 0.13.
+
+The model for confusion was trained over 65000 epochs.
+Its training stagnated with a training BCE loss of 0.1526, and a valuation BCE loss of 0.1611.
+
+The model for curiosity was trained over 62000 epochs.
+Its training stagnated with a training BCE loss of 0.1832, and a valuation BCE loss of 0.2274.
+
+The model for desire was trained over 87000 epochs.
+Its training stagnated with a training BCE loss of 0.0807, and a valuation BCE loss of 0.0843.
+
+The model for disappointment was trained over 48000 epochs.
+Its training stagnated with a training BCE loss of 0.1675, and a valuation BCE loss of 0.1786.
+
+The model for disapproval was trained over 51000 epochs.
+Its training stagnated with a training BCE loss of 0.1888, and a valuation BCE loss of 0.2094.
+
+The model for disgust was trained over 58000 epochs.
+Its training stagnated with a training BCE loss of 0.1096, and a valuation BCE loss of 0.144.
+
+The model for embarrassment was trained over 96000 epochs.
+Its training stagnated with a training BCE loss of 0.0565, and a valuation BCE loss of 0.0729.
+
+The model for example_very_unclear was trained over 85000 epochs.
+Its training stagnated with a training BCE loss of 0.0558, and a valuation BCE loss of 0.1048.
+
+The model for excitement was trained over 71000 epochs.
+Its training stagnated with a training BCE loss of 0.1395, and a valuation BCE loss of 0.175.
+
+The model for fear was trained over 123000 epochs.
+Its training stagnated with a training BCE loss of 0.0689, and a valuation BCE loss of 0.0555.
+
+The model for gratitude was trained over 82000 epochs.
+Its training stagnated with a training BCE loss of 0.1160, and a valuation BCE loss of 0.1495.
+
+The model for joy was trained over 69000 epochs.
+Its training stagnated with a training BCE loss of 0.1450, and a valuation BCE loss of 0.1534.
+
+The model for grief was trained over 275000 epochs.
+Its training stagnated with a training BCE loss of 0.0320, and a valuation BCE loss of 0.0442.
+
+The model for love was trained over 51000 epochs.
+Its training stagnated with a training BCE loss of 0.1152, and a valuation BCE loss of 0.1376.
+
+The model for nervousness was trained over 177000 epochs.
+Its training stagnated with a training BCE loss of 0.0345, and a valuation BCE loss of 0.0177.
+
+The model for optimism was trained over 47000 epochs.
+Its training stagnated with a training BCE loss of 0.1627, and a valuation BCE loss of 0.1899.
+
+The model for pride was trained over 179000 epochs.
+Its training stagnated with a training BCE loss of 0.0286, and a valuation BCE loss of 0.0285.
+
+The model for realization was trained over 53000 epochs.
+Its training stagnated with a training BCE loss of 0.1679, and a valuation BCE loss of 0.1654.
+
+The model for relief was trained over 221000 epochs.
+Its training stagnated with a training BCE loss of 0.0435, and a valuation BCE loss of 0.008.
+
+The model for remorse was trained over 86000 epochs.
+Its training stagnated with a training BCE loss of 0.0746, and a valuation BCE loss of 0.1012.
+
+The model for sadness was trained over 53000 epochs.
+Its training stagnated with a training BCE loss of 0.1333, and a valuation BCE loss of 0.1666.
+
+The model for surprise was trained over 59000 epochs.
+Its training stagnated with a training BCE loss of 0.1148, and a valuation BCE loss of 0.1297.
+
+The model for neutral was trained over 77000 epochs.
+Its training stagnated with a training BCE loss of 0.4995, and a valuation BCE loss of 0.5268.
+

@@ -1,4 +1,4 @@
-**Fredrick Farouk. README.md**
+# A Project Report for EmojiLand
 
 Below is a report on the journey of making this project.  
 I worked on this during the summer of 2025.

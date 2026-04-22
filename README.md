@@ -128,9 +128,7 @@ For AI-generated inputs, they were closer to the inputs the AI would practically
 
 ---
 
-## Outcome
-
-I made both (both weights are found in emoji_trained_model_weights/), but in the end, it didn't matter. Both models overfit instantly, because it didn't have a large enough dataset to work with.
+I made both (both sets of weights are found in `emoji_trained_model_weights/`), but in the end, it didn't matter. Both models overfit instantly, because it didn't have a large enough dataset to work with.
 
 I solved this by ditching machine learning altogether and spending a few hours writing my own weights; after all, there's only 28 * 10 = 280 weights + 10 biases = 290 parameters to find.
 
@@ -145,11 +143,11 @@ Of course, it still suffers from the garbage-in garbage-out phenomenon: simple p
 In general, there are more false-positives than false-negatives, which is something I'm quite happy with.
 
 Finally, I put together the two parts in emoji_predictor.py, evaluating and running tests on the model.
-Thank you for reading my synopsis. This was an amazing project to work on.
+Thank you for reading my synopsis. This was a great project to work on.
 
 ## Usage
 
 Clone the repository. No requirements.
-To test a model, run emoji_predictor.py.
+To test a model, run `emoji_predictor.py`.
 
 To train a new model, use the training files provided. To create a new TF-IDF vector, ensure the commented section of `ai_requirements/tfidf_vector/vectorizer.py` is uncommented.

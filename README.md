@@ -19,6 +19,8 @@ The primary goal, however, was to use zero machine learning (ML) libraries, so t
 
 I took a relatively simple model: logistic regression simple gradient descent.
 
+***The full details of training and evaluating the model are shown in `Model Flowchart (OPEN ME).svg`***
+
 ---
 
 ## Text → Emotion Model

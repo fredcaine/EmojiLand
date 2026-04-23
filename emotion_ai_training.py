@@ -125,7 +125,7 @@ for emotion in emotions:
     # This is the directory we will move the completed files into.
     npz_file = f"emotion_model_weights/{emotion}.npz"
 
-    # If the model has been trained before, we load the currect state of the model.
+    # If the model has been trained before, we load the current state of the model.
     if os.path.exists(npz_file):
         data = np.load(npz_file)
         weights = data["weights"]
